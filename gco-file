@@ -6,11 +6,11 @@
 #REPO=git@github.com:clearml/clearml-helm-charts.git
 #FILEPATH=charts/clearml/values-production.yaml
 REPO=$1
-FILEPATH=$2
+BRANCH=$2
+FILEPATH=$3
 DIRN=`dirname $FILEPATH`
-BRANCH=main
 #COPY_TO=`pwd`
-COPY_TO=`realpath $3`
+COPY_TO=`realpath $4`
 
 file=`basename $FILEPATH`
 file_name=${file%.*}
